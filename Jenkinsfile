@@ -22,7 +22,7 @@ pipeline {
       steps {
         withMaven(maven : 'maven_3_6_0') {
           echo 'Running Maven Deployment...'
-          sh 'mvn deploy'
+          sh 'mvn clean install'
         }
       }
     }
